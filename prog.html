@@ -1,0 +1,41 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+
+    <title>Progrss bar </title>
+    <link rel = "stylesheet" href="style.css">
+</head>
+<body> 
+
+ <marquee><h1> Welcome to My Dashbord   </h1> </marquee>
+
+<h3> click and update result below in progress bar </h3> 
+<center>
+
+<div id="Progress_Status"> 
+<div id="myprogressBar"></div> 
+</div> 
+
+</center>
+
+<br> 
+<button onclick="update()">click here</button> 
+
+<script> 
+function update() { 
+var element = document.getElementById("myprogressBar"); 
+var width = 1; 
+var identity = setInterval(scene, 10); 
+function scene() { 
+	if (width >= 100) { 
+	clearInterval(identity); 
+	} else { 
+	width++; 
+	element.style.width = width + '%'; 
+	} 
+} 
+} 
+</script> 
+
+</body> 
+</html> 
